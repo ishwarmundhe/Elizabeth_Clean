@@ -9,9 +9,9 @@
 {% endif %}
 
 
-{% if section.settings.enable_published_at %}
+{% if section.settings.enable_published_date %}
 
-   <time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%Y-%m-%d' }}</time>
+   <time datetime="{{ article.published_date | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%Y-%m-%d' }}</time>
 
 {% endif %}
 
