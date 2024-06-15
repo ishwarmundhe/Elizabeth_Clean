@@ -36,7 +36,7 @@
             {% if article.image != blank %}
                  <img class= "w-full h-80 md:h-96 object-cover object-center " src="{{ article.image | img_url: 'large' }}" alt="{{ article.image.alt }}">
                  {% else %}
-                 {% assign placeholder_image =  'lifestyle-2' %}
+                 {% assign placeholder_image =  'lifestyle-1' %}
                  {{ placeholder_image |  placeholder_svg_tag :'w-full h-80 md:h-96 object-cover object-center p-5 ' }}
 
             {% endif %}
