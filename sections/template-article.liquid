@@ -1,6 +1,11 @@
 {% for block in section.blocks %}
     {% case block.type %}
         {% when "article_title" %}
+      <div class="flex item-center justify-center">
+                <div class="max-w-7xl">
+                    <h1 class="text-4xl md:text-6xl font-medium"> {{article.title}}</h1>
+                </div>
+            </div>
               <h1>{{ article.title }}</h1>
         {% when "article_author" %}
               {% if section.settings.enable_author %}
