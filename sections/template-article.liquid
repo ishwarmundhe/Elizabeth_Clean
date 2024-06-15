@@ -1,8 +1,31 @@
-<h1> {{ article.title }}</h1>
-<small> {{ article.author }}</small>
 
-<time datetime="{{ article.published_at | date :'%Y-%m-%d' }}"> {{ article.published_at | date :'%Y-%m-%d' }}</time>
 
-<img src="{{ article.image | img_url :'large' }}" alt="{{ article.image.alt }}">
+<h1>{{ article.title }}</h1>
 
-<div class="" > {{ article.content }}</div>
+<small>{{ article.author }}</small>
+
+<time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: '%Y-%m-%d' }}</time>
+
+<img src="{{ article.image | img_url: 'large' }}" alt="{{ article.image.alt }}">
+
+<div class="">{{ article.content }}</div>
+
+{% schema %}
+{
+  "name": "Template article",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable_author",
+      "default": true,
+      "label": "Display Author Name"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_published_date",
+      "default": true,
+      "label": "Display Published Date"
+    }
+  ]
+}
+{% endschema %}
